@@ -1,0 +1,54 @@
+body{
+    font-family: Merriweather;
+    /* margin - remai aplink blocka */
+    margin: 0px;
+}
+/* hover - kai uzeini su pelyte ant linko(anchorų), pakeicia spalva it pns. */
+a:hover {
+    background-color: red;
+}
+/* active - kai paspaudi ant linko(anchorų), pakeicia spalva it pns. */
+a:active {
+    font-weight: bold;
+}
+/* line-height - tarpai tarp eiluciu */
+main {
+    line-height: 1.5;
+}
+/* div - pasidarai klase, kuria nori isskirti ir priskiri ja kazkokiam elementui arba ne vienam */
+div.tarpas_3 {
+    line-height: 2;
+}
+/* "+" - reiskia,kad iskart po kazkokio tag'o tarkim h2, h3 tag'as turetu kita css stiliu(sintakse)  */
+h2 + h3 {
+    font-family: 'Open Sans', sans-serif;
+    color: lightblue;
+}
+h4 + p {
+    font-size: 10px;
+    background-color: grey;
+    padding: 10px;
+}
+/* Kiekvieno straipsnio paskutinis anchoras (linkas) turi atrodyti kaip mygtukas. Tam reikės užsidėti
+    borderius ir vidinius atitraukimus */
+article > a {
+    border: 2px solid brown;
+    border-radius: 1000px;
+    padding: 10px;
+}
+/* nuima nuo linku apatines linijas */
+a {
+    text-decoration: none;
+}
+/* priskiriam paveiksliukui ploti, kad jis butu kaireje ouseje ir atitraukimus visu perimetru */
+img {
+    width: 200px;
+    float: left;
+    padding: 10px;
+}
+article:nth-child(even) {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
