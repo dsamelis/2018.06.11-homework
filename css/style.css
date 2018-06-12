@@ -1,7 +1,16 @@
+
+/* GLOBALUS STILIAI */
+
 body{
     font-family: Merriweather;
     /* margin - remai aplink blocka */
     margin: 0px;
+    padding: 10px 20px;
+}
+/* nuima nuo linku apatines linijas */
+a {
+    text-decoration: none;
+    color: purple;
 }
 /* hover - kai uzeini su pelyte ant linko(anchorų), pakeicia spalva it pns. */
 a:hover {
@@ -25,30 +34,36 @@ h2 + h3 {
     color: lightblue;
 }
 h4 + p {
-    font-size: 10px;
+    font-size: 13px;
     background-color: grey;
-    padding: 10px;
+    padding: 20px;
 }
 /* Kiekvieno straipsnio paskutinis anchoras (linkas) turi atrodyti kaip mygtukas. Tam reikės užsidėti
-    borderius ir vidinius atitraukimus */
+    borderius ir vidinius atitraukimus ir padaro kad jie eitu vertikaliai, o ne horizontaliai (inline block) */
 article > a {
-    border: 2px solid brown;
+    border: 1px solid brown;
     border-radius: 1000px;
     padding: 10px;
+    display: inline-block;
 }
-/* nuima nuo linku apatines linijas */
-a {
-    text-decoration: none;
-}
-/* priskiriam paveiksliukui ploti, kad jis butu kaireje ouseje ir atitraukimus visu perimetru */
+/* priskiriam paveiksliukui ploti, kad jis butu kaireje(ir numeta teksta jam po desine) ouseje ir atitraukimus visu perimetru */
 img {
     width: 200px;
     float: left;
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
+    margin: 0px;
+    overflow: auto;
 }
+/* kiekvienas lyginis straipsnis(article) issikiria */
 article:nth-child(even) {
   background-color: black;
   color: white;
-  padding: 10px;
-  margin: 10px;
+  padding: 20px;
+  margin: 30px 0px;
+}
+/* kad sutaisytu float problema su nuotrauka (kai nuotrauka uzlenda ant teksto ) */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
